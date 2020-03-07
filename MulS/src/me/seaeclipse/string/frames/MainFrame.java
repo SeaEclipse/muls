@@ -47,7 +47,7 @@ import me.seaeclipse.string.hash.strings.SHA256;
 import me.seaeclipse.string.hash.strings.SHA512;
 
 /**
- * @author scarlet
+ * @author SeaEclipse
  *
  */
 @SuppressWarnings("serial")
