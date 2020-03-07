@@ -3,7 +3,10 @@ This project that aims to provide multiplatform tool for obtain hashes of files 
 
 # First Release
 The first release of the software is not compiled and is located in the experimental branch and not in the master branch.
-This release cannot hash files, only strings!
+This release cannot hash files, only strings.
+
+# Hashing Algorythms
+In the version o.77-Alpha you have only SHA1, SHA256 and SHA512 avaialable for hashing... MD5 and other algorythms will be added in future releases.
 
 # Support notice
 If I will add new features in the experimental branch, you will encounter bugs maybe... if you do please make a pull request with the bug fixed or just report the bug!
