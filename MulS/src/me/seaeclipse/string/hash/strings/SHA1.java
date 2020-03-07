@@ -35,8 +35,9 @@ package me.seaeclipse.string.hash.strings;
 import java.security.MessageDigest;
 import java.util.Formatter;
 
+
 /**
- * @author scarlet
+ * @author SeaEclipse
  *
  */
 public final class SHA1 {
