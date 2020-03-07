@@ -35,8 +35,9 @@ package me.seaeclipse.string.hash.strings;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 
+
 /**
- * @author scarlet
+ * @author SeaEclipse
  *
  */
 public class Rwby {
