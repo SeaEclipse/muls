@@ -34,8 +34,9 @@ package me.seaeclipse.string;
 
 import me.seaeclipse.string.frames.MainFrame;
 
+
 /**
- * @author scarlet
+ * @author SeaEclipse
  *
  */
 public final class Main {
