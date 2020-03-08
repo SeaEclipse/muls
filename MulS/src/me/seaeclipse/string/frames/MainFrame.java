@@ -47,7 +47,7 @@ import me.seaeclipse.string.hash.strings.SHA256;
 import me.seaeclipse.string.hash.strings.SHA512;
 
 /**
- * @author SeaEclipse
+ * @author scarlet
  *
  */
 @SuppressWarnings("serial")
@@ -76,6 +76,14 @@ public final class MainFrame extends JFrame{
 	JButton SHA1 = new JButton("SHA-1");
 	JButton SHA256 = new JButton("SHA-256");
 	JButton SHA512 = new JButton("SHA-512");
+	
+	private boolean isEmpty() {
+		if(stringToHash.getText().trim().isEmpty()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 		
 	public void genFrame() {
 		
@@ -113,7 +121,8 @@ public final class MainFrame extends JFrame{
 		
 		hashS.setVisible(true);
 	}
-	
+
+	@SuppressWarnings("static-access")
 	public void placeLayout(JPanel panel) {
 		SHA1.setBounds(1, 1, 1, 1);
 		panel.add(SHA1);
@@ -121,7 +130,11 @@ public final class MainFrame extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				SHA1 sha = new SHA1();
-				hashedString.setText(sha.mkSHA1(stringToHash.getText()));
+				if(isEmpty()) {
+					hashedString.setText("You have to insert something to hash first");
+				}else {
+					hashedString.setText(sha.mkSHA1(stringToHash.getText()));
+				}
 			}
 		});
 		
@@ -131,7 +144,11 @@ public final class MainFrame extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				SHA256 sha = new SHA256();
-				hashedString.setText(sha.mkSHA256(stringToHash.getText()));
+				if(isEmpty()) {
+					hashedString.setText("You have to insert something to hash first");
+				} else {
+					hashedString.setText(sha.mkSHA256(stringToHash.getText()));
+				}
 			}
 		});
 		
@@ -141,7 +158,11 @@ public final class MainFrame extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				SHA512 sha = new SHA512();
+				if(isEmpty()) {
+					hashedString.setText("You have to insert something to hash first");
+				} else {
 				hashedString.setText(sha.mkSHA512(stringToHash.getText()));
+				}
 			}
 		});
 	}
