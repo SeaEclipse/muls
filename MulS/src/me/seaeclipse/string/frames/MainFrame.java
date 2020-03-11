@@ -66,6 +66,8 @@ public final class MainFrame extends JFrame{
 	
 	public static String stringToHash1 = stringToHash.getText();
 	
+	public JTextField license = new JTextField(20);
+	
 	/*
 	 * Buttons
 	 */
@@ -208,8 +210,27 @@ public final class MainFrame extends JFrame{
 		 */
 		
 		JLabel credits = new JLabel("MulS by SeaEclipse");
-		credits.setBounds(157, 300, 200, 15);
+		credits.setBounds(195, 300, 200, 15);
 		panel.add(credits);
+	}
+	
+	public void genVideoLicense() {
+		JFrame frame = new JFrame();
+		frame.setSize(500, 350);
+		frame.setTitle(Main.License_Used);
+		
+		frame.setResizable(false);
+		
+		frame.setVisible(true);
+		
+		
+	}
+	
+	void developComponents(JPanel panel) {
+		panel.setLayout(null);
+		
+		
+		panel.add(license);
 	}
 	
 }
